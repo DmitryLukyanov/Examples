@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using MongoDB.Driver;
 
 namespace ConsoleAppTest_ForARM
 {
@@ -13,8 +14,9 @@ namespace ConsoleAppTest_ForARM
 
             try
             {
-                var libraryVersion = MongoDB.Libmongocrypt.Library.Version;
-                Console.WriteLine(libraryVersion); // should not be reached with ARM
+                //var libraryVersion = MongoDB.Libmongocrypt.Library.Version;
+                var t = new MongoClient();
+                Console.WriteLine("Success"); // should not be reached with ARM
             }
             catch (FileNotFoundException e)
             {
